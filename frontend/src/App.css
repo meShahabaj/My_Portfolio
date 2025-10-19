@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.page_pagination {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;                 
+    left: 0;
+    width: 100%;            
+    z-index: 1000;
+    background-color: white;
+    padding: .5rem 0;       
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page_pagination_button{
+    margin: 1% 5%;
+    
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page_home{
+    display: flex;
+    margin-top: 4rem;
+    background: linear-gradient(120deg, white, black);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.page_home_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
-
-.App-link {
-  color: #61dafb;
+.page_home_right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page_home_right_img{
+    width: 60%;
+}
+.page_about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page_about_paragraph{
+    margin: 3%;
+}
+.page_certificates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page_certificates_imgdiv{
+    display: flex;
+}
+.page_certificates_imgdiv_img{
+    display: flex;
+    width: 40%;
+}
+.page_contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.page_contact_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page_contact_div_div{
+    flex: 1;
+    margin: 2rem 5rem;
 }
