@@ -1,8 +1,15 @@
 import "./App.css"
 import {useRef} from "react";
-
+import { FcHome, FcInspection, FcManager, FcBusinessContact, FcDownload } from "react-icons/fc";
 function App() {
-  const header_buttons = ["Home", "About", "Cerificates", "Contact", "Download CV"]
+  const headerButtons = [
+    { name: "Home", icon: <FcHome className="icon"/> },
+    { name: "About", icon: <FcManager className="icon"/> },
+    { name: "Certificates", icon: <FcInspection  className="icon"/> },
+    { name: "Contact", icon: <FcBusinessContact className="icon"/> },
+    { name: "Download CV", icon: <FcDownload className="icon"/> },
+  ];
+
   const courses = ["Udemy.jpeg"]
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -12,7 +19,7 @@ function App() {
   const refMap = {
     Home: homeRef,
     About: aboutRef,
-    Cerificates: certificateRef,
+    Certificates: certificateRef,
     Contact: contactRef
   };
 
@@ -28,10 +35,17 @@ function App() {
 
   return (
     <div className="page">
+      
         <div className="page_pagination">
-          {header_buttons.map((b)=>(<button className="page_pagination_button" 
-          onClick={() => (b === "Download CV" ? downloadCV() : scrollTo(refMap[b]))}>{b}</button>))}
+          {headerButtons.map((b)=>(
+            <button className="page_pagination_button" onClick={() => (
+              b.name === "Download CV" ? downloadCV() : scrollTo(refMap[b.name]))}>
+                {b.icon}
+                <span>{b.name}</span>
+            </button>))
+          }
       </div>        
+      
       <div ref={homeRef} className="page_home">
         <div className="page_home_left">
           <p>Hi There, I'm</p>
@@ -70,7 +84,7 @@ function App() {
           </div>
           <div>
             <h2>Github</h2>
-            <p>shahabaj773@gmail.com</p>
+            <p>https://github.com/meShahabaj</p>
           </div>
           
         </div>

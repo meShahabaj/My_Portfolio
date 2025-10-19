@@ -7,17 +7,28 @@
     width: 100%;            
     z-index: 1000;
     background-color: white;
-    padding: .5rem 0;       
+    padding: .2rem 0;       
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .page_pagination_button{
-    margin: 1% 5%;
-    
+    margin: 1% 6.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+}
+.page_pagination_button:hover{
+    cursor: pointer;
+}
+.icon{
+    color: blue;
+    font-size: 30px;
 }
 .page_home{
     display: flex;
-    margin-top: 4rem;
+    margin-top: 4.7rem;
     background: linear-gradient(120deg, white, black);
 }
 .page_home_left{
