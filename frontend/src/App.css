@@ -74,10 +74,13 @@
 }
 .page_certificates_imgdiv{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .page_certificates_imgdiv_img{
     display: flex;
-    width: 40%;
+    width: 30%;
+    margin: 2rem;
 }
 .page_contact{
     display: flex;
