@@ -10,7 +10,6 @@
     padding: .2rem 0;       
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
-
 .page_pagination_button{
     margin: 1% 6.5%;
     display: flex;
@@ -29,17 +28,28 @@
 .page_home{
     display: flex;
     margin-top: 4.7rem;
-    background: linear-gradient(120deg, white, black);
+    position: relative;
+}
+.page_home_bgvideo{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: blur(2px);
 }
 .page_home_left{
     display: flex;
+    z-index: 100;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
+    color: white;
 }
 .page_home_right{
     flex: 1;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;

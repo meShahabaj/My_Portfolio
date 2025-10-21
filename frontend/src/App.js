@@ -1,5 +1,5 @@
 import "./App.css"
-import {useRef} from "react";
+import {useRef, useEffect} from "react";
 import { FcHome, FcInspection, FcManager, FcBusinessContact, FcDownload } from "react-icons/fc";
 function App() {
   const headerButtons = [
@@ -32,6 +32,13 @@ function App() {
     link.download = "Shahabaj_Khan_CV.pdf";
     link.click();
   };
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1; // slow down
+    }
+  }, []);
 
   return (
     <div className="page">
@@ -47,6 +54,9 @@ function App() {
       </div>        
       
       <div ref={homeRef} className="page_home">
+        <video ref={videoRef} autoPlay muted loop playsInline className="page_home_bgvideo">
+          <source src="/My_Portfolio/video.mp4" type="video/mp4"/>
+        </video>
         <div className="page_home_left">
           <p>Hi There, I'm</p>
           <h1>Shahabaj Khan</h1>
@@ -59,15 +69,16 @@ function App() {
       <div ref={aboutRef} className="page_about">
         <h2 className="page_about_heading">About</h2>
         <p  className="page_about_paragraph">
-          Hi, I’m Shahabaj Khan, a passionate and driven Data Scientist with a love for creating efficient, 
-          clean, and user-friendly digital solutions. I specialize in Python, React, JavaScript, and Machine
-          Learning and have experience building projects that solve real-world problems.
-          I enjoy tackling challenging problems, learning new technologies, and continuously improving my skills.
-          When I’m not coding, you can find me exploring the latest trends in tech, working on personal projects,
-          or contributing to open-source communities.
-          My goal is to build impactful applications that not only meet the needs of users but also leave a 
-          lasting impression. I thrive in collaborative environments and am always excited to connect with 
-          like-minded individuals who share my passion for innovation and technology.</p>          
+          Hey, I’m Shahabaj Khan! I’m a data enthusiast who loves turning ideas into real, 
+          working projects. I enjoy building clean, efficient, and user-friendly digital 
+          experiences — whether that’s through Python, React, JavaScript, or machine learning.
+          I’m always curious about how things work and love diving into challenging problems. 
+          Learning new tools and experimenting with different technologies is what keeps me motivated.
+          When I’m not coding, I’m usually exploring new tech trends, tinkering with side projects,
+          or contributing to open-source. My goal is simple — to build things that make an impact 
+          and leave a lasting impression.
+          I really enjoy collaborating with others and meeting people who are just as passionate 
+          about innovation and technology as I am.</p>          
       </div>
       <div ref={certificateRef} className="page_certificates">
         <h2  className="page_certificates_heading">Certificates</h2>
