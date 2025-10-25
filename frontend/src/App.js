@@ -10,7 +10,7 @@ function App() {
     { name: "Download CV", icon: <FcDownload className="icon"/> },
   ];
 
-  const courses = ["Udemy.jpeg", "SimpliLearn_Certificate_ML.jpeg"]
+  const courses = ["SimpliLearn_Certificate_DL.png", "SimpliLearn_Certificate_ML.jpeg", "Udemy.jpeg"]
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const certificateRef = useRef(null);
